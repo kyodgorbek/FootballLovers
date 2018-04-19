@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroClient {
 
-    private static final String ROOT_URL = "http://livescore-api.com/api-client/scores/live.json?key=V2WgfDFBczaVCnaf&secret=MUDUKyAQhr4rmk6in2yDGefTNpPpNZFz";
+    private static final String ROOT_URL = "http://livescore-api.com/api-client/";
 
     // we have to get json response correctly and I have created three pojo classes such as Data Example and Match but main problem
     //is I did not understand how to use get method here.
