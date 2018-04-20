@@ -10,6 +10,7 @@ public class RetroClient {
     // we have to get json response correctly and I have created three pojo classes such as Data Example and Match but main problem
     //is I did not understand how to use get method here.
     // in api service class
+
     /**
      * Get Retrofit Instance
      */

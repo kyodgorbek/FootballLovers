@@ -5,20 +5,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.yodgorbekkomilov.footballlovers.Pojo.Match;
 import com.example.yodgorbekkomilov.footballlovers.R;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class MatchAdapter extends ArrayAdapter<Match> {
 
-    List<Match> matchList;
     public Context context;
+    List<Match> matchList;
     private LayoutInflater mInflater;
 
     // Constructors
@@ -59,7 +57,7 @@ public class MatchAdapter extends ArrayAdapter<Match> {
         public final TextView textId;
         public final TextView textHomeName;
 
-        private ViewHolder(RelativeLayout rootView,  TextView textViewName, TextView textViewEmail) {
+        private ViewHolder(RelativeLayout rootView, TextView textViewName, TextView textViewEmail) {
             this.rootView = rootView;
 
             this.textId = textViewName;

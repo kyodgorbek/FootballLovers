@@ -1,11 +1,11 @@
 package com.example.yodgorbekkomilov.footballlovers;
 
 import android.app.ProgressDialog;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onResponse(Call<ResponseMatch> call, Response<ResponseMatch> response) {
                             dialog.dismiss();
 
-                            if(response.isSuccessful()) {
+                            if (response.isSuccessful()) {
                                 /**
                                  * Got Successfully
                                  */
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                                  */
                                 adapter = new MatchAdapter(MainActivity.this, contactList);
                                 listView.setAdapter(adapter);
-
+ 
                             } else {
                                 Snackbar.make(parentView, R.string.string_some_thing_wrong, Snackbar.LENGTH_LONG).show();
                             }
