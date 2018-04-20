@@ -47,8 +47,8 @@ public class MatchAdapter extends ArrayAdapter<Match> {
 
         Match item = getItem(position);
 
-        vh.textViewName.setText(item.getId());
-        vh.textViewEmail.setText(item.getHomeName());
+        vh.textId.setText(item.getId());
+        vh.textHomeName.setText(item.getHomeName());
 
         return vh.rootView;
     }
@@ -56,14 +56,14 @@ public class MatchAdapter extends ArrayAdapter<Match> {
     private static class ViewHolder {
         public final RelativeLayout rootView;
 
-        public final TextView textViewName;
-        public final TextView textViewEmail;
+        public final TextView textId;
+        public final TextView textHomeName;
 
         private ViewHolder(RelativeLayout rootView,  TextView textViewName, TextView textViewEmail) {
             this.rootView = rootView;
 
-            this.textViewName = textViewName;
-            this.textViewEmail = textViewEmail;
+            this.textId = textViewName;
+            this.textHomeName = textViewEmail;
         }
 
         public static ViewHolder create(RelativeLayout rootView) {
