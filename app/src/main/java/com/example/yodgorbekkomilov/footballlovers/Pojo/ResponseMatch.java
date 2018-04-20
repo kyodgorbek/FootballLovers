@@ -3,7 +3,7 @@ package com.example.yodgorbekkomilov.footballlovers.Pojo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Response {
+public class ResponseMatch {
 
     @SerializedName("success")
     @Expose

@@ -1,10 +1,13 @@
 package com.example.yodgorbekkomilov.footballlovers.Pojo;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Data {
+public class Data extends ArrayList<Match> {
 
     @SerializedName("match")
     @Expose
@@ -18,5 +21,9 @@ public class Data {
         this.match = match;
     }
 
+    @Override
+    public Stream<Match> stream() {
+        return null;
+    }
 }
 
