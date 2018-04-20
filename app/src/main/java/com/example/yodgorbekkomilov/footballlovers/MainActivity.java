@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                                  */
                                 adapter = new MatchAdapter(MainActivity.this, contactList);
                                 listView.setAdapter(adapter);
- 
+
                             } else {
                                 Snackbar.make(parentView, R.string.string_some_thing_wrong, Snackbar.LENGTH_LONG).show();
                             }
