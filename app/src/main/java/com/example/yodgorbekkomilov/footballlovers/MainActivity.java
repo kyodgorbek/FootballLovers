@@ -103,18 +103,13 @@ public class MainActivity extends AppCompatActivity {
                     call.enqueue(new Callback<ResponseMatch>() {
                         @Override
                         public void onResponse(Call<ResponseMatch> call, Response<ResponseMatch> response) {
-
-                        }
-
-                        @Override
-                        public void onFailure(Call<ResponseMatch> call, Throwable t) {
                             dialog.dismiss();
 
                             if(response.isSuccessful()) {
                                 /**
                                  * Got Successfully
                                  */
-                                contactList = response.getData();
+                                contactList = response.body().getData();
 
                                 /**
                                  * Binding that List to Adapter
@@ -140,6 +135,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-                        }
+
+
+
+
+
 
 
