@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                      * Progress Dialog for User Interaction
                      */
                     dialog = new ProgressDialog(MainActivity.this);
-                    dialog.setTitle(getString(R.string.string_getting_json_title));
+                    dialog.setTitle(getString(R.string.string_get_message_title));
                     dialog.setMessage(getString(R.string.string_getting_json_message));
                     dialog.show();
 
