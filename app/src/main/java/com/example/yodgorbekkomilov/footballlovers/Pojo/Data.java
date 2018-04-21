@@ -7,23 +7,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class Data extends ArrayList<Match> {
+public class Data {
 
     @SerializedName("match")
-    @Expose
-    private List<Match> match = null;
+    private Match[] match = null;
 
-    public List<Match> getMatch() {
+    public Match[] getMatch() {
         return match;
     }
 
-    public void setMatch(List<Match> match) {
+    public void setMatch(Match[] match) {
         this.match = match;
     }
 
-    @Override
-    public Stream<Match> stream() {
-        return null;
-    }
 }
 

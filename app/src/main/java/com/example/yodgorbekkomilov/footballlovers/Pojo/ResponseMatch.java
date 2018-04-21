@@ -6,10 +6,10 @@ import com.google.gson.annotations.SerializedName;
 public class ResponseMatch {
 
     @SerializedName("success")
-    @Expose
+    
     private boolean success;
     @SerializedName("data")
-    @Expose
+    
     private Data data;
 
     public boolean isSuccess() {

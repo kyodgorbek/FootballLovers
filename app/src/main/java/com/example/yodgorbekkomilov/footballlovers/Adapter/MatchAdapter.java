@@ -16,11 +16,11 @@ import java.util.List;
 public class MatchAdapter extends ArrayAdapter<Match> {
 
     public Context context;
-    List<Match> matchList;
+    Match[] matchList;
     private LayoutInflater mInflater;
 
     // Constructors
-    public MatchAdapter(Context context, List<Match> objects) {
+    public MatchAdapter(Context context, Match[] objects) {
         super(context, 0, objects);
         this.context = context;
         this.mInflater = LayoutInflater.from(context);
@@ -29,7 +29,7 @@ public class MatchAdapter extends ArrayAdapter<Match> {
 
     @Override
     public Match getItem(int position) {
-        return matchList.get(position);
+        return matchList[position];
     }
 
     @Override

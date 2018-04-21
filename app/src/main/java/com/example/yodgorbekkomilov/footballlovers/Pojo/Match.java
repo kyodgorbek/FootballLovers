@@ -6,48 +6,48 @@ import com.google.gson.annotations.SerializedName;
 public class Match {
 
     @SerializedName("id")
-    @Expose
+    
     private String id;
     @SerializedName("home_name")
-    @Expose
+    
     private String homeName;
     @SerializedName("away_name")
-    @Expose
+    
     private String awayName;
     @SerializedName("score")
-    @Expose
+    
     private String score;
     @SerializedName("time")
-    @Expose
+    
     private String time;
     @SerializedName("league_id")
-    @Expose
+    
     private String leagueId;
     @SerializedName("status")
-    @Expose
+    
     private String status;
     @SerializedName("added")
-    @Expose
+    
     private String added;
 
 
     @SerializedName("last_changed")
-    @Expose
+    
     private String lastChanged;
     @SerializedName("home_id")
-    @Expose
+    
     private String homeId;
     @SerializedName("away_id")
-    @Expose
+    
     private String awayId;
 
     @SerializedName("events")
-    @Expose
-    private String events;
+    
+    private boolean events;
 
 
     @SerializedName("league_name")
-    @Expose
+    
     private String leagueName;
 
 
@@ -139,11 +139,11 @@ public class Match {
         this.awayId = awayId;
     }
 
-    public String getEvents() {
+    public boolean getEvents() {
         return events;
     }
 
-    public void setEvents(String events) {
+    public void setEvents(boolean events) {
         this.events = events;
     }
 

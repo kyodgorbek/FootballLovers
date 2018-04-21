@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,6 +19,7 @@ import com.example.yodgorbekkomilov.footballlovers.Pojo.ApiService;
 import com.example.yodgorbekkomilov.footballlovers.Pojo.Match;
 import com.example.yodgorbekkomilov.footballlovers.Pojo.ResponseMatch;
 import com.example.yodgorbekkomilov.footballlovers.Pojo.RetroClient;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView listView;
     private View parentView;
 
-    private ArrayList<Match> contactList;
+    private Match[] contactList;
     private MatchAdapter adapter;
 
 
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Array List for Binding Data from JSON to this List
          */
-        contactList = new ArrayList<>();
+        contactList = new Match[0];
 
         parentView = findViewById(R.id.parentLayout);
 
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Snackbar.make(parentView, contactList.get(position).getId() + " => " + contactList.get(position).getHomeName(), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(parentView, contactList[position].getId() + " => " + contactList[position].getHomeName(), Snackbar.LENGTH_LONG).show();
             }
         });
 
@@ -72,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         assert fab != null;
+
+
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(@NonNull final View view) {
@@ -109,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                                 /**
                                  * Got Successfully
                                  */
-                                contactList = response.body().getData();
+                                contactList = response.body().getData().getMatch();
 
                                 /**
                                  * Binding that List to Adapter

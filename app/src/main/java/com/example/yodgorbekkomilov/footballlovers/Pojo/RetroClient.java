@@ -1,5 +1,8 @@
 package com.example.yodgorbekkomilov.footballlovers.Pojo;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -14,6 +17,10 @@ public class RetroClient {
     /**
      * Get Retrofit Instance
      */
+   // Gson gson = new GsonBuilder()
+    //      .setLenient()
+      //      .create();
+
     private static Retrofit getRetrofitInstance() {
         return new Retrofit.Builder()
                 .baseUrl(ROOT_URL)
